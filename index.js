@@ -129,7 +129,7 @@ document.getElementById('editButton').addEventListener('click', () => {
     const selectedRow = currentData.find(item => item.id === editingRowId);
 
     // Pre-fill form with selected row data
-    document.getElementById('chemicalName').value = selectedRow.name;
+    document.getElementById('chemicalName').value = selectedRow.chemicalName;
     document.getElementById('vendor').value = selectedRow.vendor;
     document.getElementById('density').value = selectedRow.density;
     document.getElementById('viscosity').value = selectedRow.viscosity;
