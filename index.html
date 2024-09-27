@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Supplies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Chemical Supplies</h2>
+    <button id="deleteButton" disabled>Delete Selected</button>
+    <button id="editButton" disabled>Edit Selected</button>
+    <button id="addButton">Add Row</button>
+    
+    <!-- Dropdown for sorting options -->
+    <label for="sortOption">Sort By:</label>
+    <select id="sortOption">
+        <option value="density">Density</option>
+        <option value="quantity">Quantity</option>
+        <option value="viscosity">Viscosity</option>
+    </select>
+    
+    <!-- Sorting buttons -->
+    <button id="sortAscending">↑ Sort Ascending</button>
+    <button id="sortDescending">↓ Sort Descending</button>
+    <button id="refreshButton">Refresh</button>
+    
+    <table id="chemicalTable">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>ID</th>
+                <th>Chemical Name</th>
+                <th>Vendor</th>
+                <th>Density (g/m³)</th>
+                <th>Viscosity (m²/s)</th>
+                <th>Packaging</th>
+                <th>Pack Size</th>
+                <th>Unit</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be generated dynamically here -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Add new row form -->
+<div id="addRowForm" style="display:none;">
+    <h3>Add/Edit Chemical</h3>
+    <label for="chemicalName">Chemical Name:</label>
+    <input type="text" id="chemicalName"><br>
+    <label for="vendor">Vendor:</label>
+    <input type="text" id="vendor"><br>
+    <label for="density">Density (g/m³):</label>
+    <input type="number" id="density"><br>
+    <label for="viscosity">Viscosity (m²/s):</label>
+    <input type="number" id="viscosity"><br>
+    <label for="packaging">Packaging:</label>
+    <input type="text" id="packaging"><br>
+    <label for="packSize">Pack Size:</label>
+    <input type="number" id="packSize"><br>
+    <label for="unit">Unit:</label>
+    <input type="text" id="unit"><br>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity"><br>
+    <button id="saveRowButton">Save</button>
+    <button id="cancelAddButton">Cancel</button>
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>
